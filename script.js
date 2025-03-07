@@ -1,5 +1,6 @@
 //your JS code here. If required.
-function createPromise () {
+document.addEventListener('DOMContentLoaded', function() {
+	function createPromise () {
 	return new Promise ((resolve,reject) => {
        let time = (Math.random() * (3000-1000) +1000).toFixed(3);
 		setTimeout(() => {
@@ -14,9 +15,7 @@ let promise3 = createPromise();
 
 Promise.all([promise1,promise2,promise3]).then((data) => {
 	console.log(data);
-})
-
-document.getElementById("output").innerHTML = `
+	document.getElementById("output").innerHTML = `
     <tr> 
 	  <td>Promise 1 </td>
 	  <td>${data[0]} </td>
@@ -34,6 +33,11 @@ document.getElementById("output").innerHTML = `
 	  <td>${Math.max(...data)} </td>
 	</tr>
 `;
+})
+
+})
+
+
 
 
 
