@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	function createPromise () {
 	return new Promise ((resolve,reject) => {
-       let time = (Math.random() * (3000-1000) +1000).toFixed(3);
+       let time = Math.floor(Math.random() * (3000-1000) +1000);
 		setTimeout(() => {
 			resolve(time);
 		},time);
