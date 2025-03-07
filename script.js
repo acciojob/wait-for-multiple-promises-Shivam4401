@@ -8,13 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
 		},time);
 	});
 }
-
+ 
 let promise1 = createPromise();
 let promise2 = createPromise();
 let promise3 = createPromise();
 
 Promise.all([promise1,promise2,promise3]).then((data) => {
 	console.log(data);
+	document.getElementById("loading").remove();
 	document.getElementById("output").innerHTML = `
     <tr> 
 	  <td>Promise 1 </td>
